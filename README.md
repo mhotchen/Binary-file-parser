@@ -16,15 +16,13 @@ Mostly for the lulz, but I also want to create an emulator at some point, and ne
 2. Once the page has loaded create a new instantiation of the BinaryFileUploader. The first argument is an object with the following items:
    * `element` The file upload element
    * `onFileLoad` A closure that is executed once the file is been loaded
-
    `onFileLoad` has one argument passed to it: a `BinaryString` object.
-
    eg:
 
-       var uploader = new BinaryFileUploader({
-		   element:    document.getElementById('file-input'),
-		   onFileLoad: function(file) {console.log(file.toUtf8());}
-	   });
+        var uploader = new BinaryFileUploader({
+		        element:    document.getElementById('file-input'),
+		        onFileLoad: function(file) {console.log(file.toUtf8());}
+	       });
 
 3. Manipulate your `BinaryString` object as you see fit. Additional methods soon for dealing with integers, floats, more string formats
 
