@@ -33,13 +33,19 @@
         var asString = '',
             element  = document.getElementById('file-upload-results');
 
+        // loop through the bytes, using file.next() to increase the internal
+        // pointer by 1, and format each byte in 2 character hex format, like
+        // 01 E3 F2 CC, etc.
         do {
           var byte = file.readByte().toString(16);
+
           // pad with leading 0's
           while (byte.length < 2) {
             byte = '0' + byte;
           }
+
           asString += byte + ' ';
+
         } while (file.next());
 
         element.innerText = asString;
