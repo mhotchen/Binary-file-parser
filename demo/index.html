@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=utf-8>
+    <title>Demo for binary file parser</title>
+    <style>
+      #file-upload-results {width: 400px; height: 200px;}
+    </style>
+  </head>
+  <body>
+    <h1>Demo for binary file parser</h1>
+    <p><strong>Instructions:</strong> select a file you want to parse for binary output. It will then be output to your screen in hex format.
+
+    <form method="get">
+      <input type="file" id="file-upload">
+      <hr>
+      <textarea id="file-upload-results" readonly></textarea>
+    </form>
+
+    <script src="../src/binarystring.js"></script>
+    <script src="../src/binaryfileuploader.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var fileUploader = new BinaryFileUploader({
+          element:    document.getElementById('file-upload'),
+          onFileLoad: handleFileLoad
+        });
+
+        if (!fileUploader.hasFileUploaderSupport()) alert('Your browser doesn\'t support the file reading API');
+      });
+
+      function handleFileLoad(file) {
+        var asString = '',
+            element  = document.getElementById('file-upload-results');
+
+        do {
+          var byte = file.readByte().toString(16);
+          // pad with leading 0's
+          while (byte.length < 2) {
+            byte = '0' + byte;
+          }
+          asString += byte + ' ';
+        } while (file.next());
+
+        element.innerText = asString;
+      }
+    </script>
+  </body>
+</html>
