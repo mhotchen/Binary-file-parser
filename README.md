@@ -4,7 +4,7 @@ Worst. Project name. Ever.
 
 ## What?
 
-Yeah, basically, you create a file upload form element, and attach the BinaryFileUploader object to it, then when a user selects a file, it will parse it and generate a bytecode table for it, without ever making a request to the server.
+Yeah, basically, you create a file upload form element, and attach the BinaryFileUploader object to it, then when a user selects a file, it will parse it and generate an array of the bytes, without ever making a request to the server.
 
 ## Why?
 
@@ -39,12 +39,12 @@ You can use `BinaryString` on it's own, without using the `BinaryFileUploader`. 
 
 * Better documentation
 * New functions:
-  * Methods to parse signed/unsigned int's
+  * Methods to parse signed/unsigned integers
   * Methods for floats
   * Utf16 and 32
 * Multi file upload
 * Drag+drop upload
 * Tests
 * Breaking large data sets in to smaller chunks
-* Lazy loading of bytecode array?
+* Lazy loading of bytes array?
 * onProgress event
