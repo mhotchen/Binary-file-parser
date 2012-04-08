@@ -23,7 +23,7 @@ function BinaryFileUploader(o) {
 
 
 	this.hasFileUploaderSupport = function() {
-	return !!(window.File && window.FileReader && window.FileList && window.Blob);
+		return !!(window.File && window.FileReader && window.FileList && window.Blob);
 	}
 
 	this.addFileChangeListener = function() {
