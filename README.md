@@ -19,10 +19,11 @@ Mostly for the lulz, but I also want to create an emulator at some point, and ne
    `onFileLoad` has one argument passed to it: a `BinaryString` object.
    eg:
 
-        var uploader = new BinaryFileUploader({
-            element:    document.getElementById('file-input'),
-            onFileLoad: function(file) {console.log(file.toUtf8());}
-        });
+            var uploader = new BinaryFileUploader({
+                element:    document.getElementById('file-input'),
+                onFileLoad: function(file) {console.log(file.toUtf8());}
+            });
+
 
 3. Manipulate your `BinaryString` object as you see fit. Additional methods soon for dealing with integers, floats, more string formats
 
