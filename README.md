@@ -42,7 +42,7 @@ You can use `BinaryString` on it's own, without using the `BinaryFileUploader`. 
   * Methods to parse signed/unsigned int's
   * Methods for floats
   * Utf16 and 32
-* Muli file upload
+* Multi file upload
 * Drag+drop upload
 * Tests
 * Breaking large data sets in to smaller chunks
