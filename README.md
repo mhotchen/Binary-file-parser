@@ -8,7 +8,7 @@ Yeah, basically, you create a file upload form element, and attach the BinaryFil
 
 ## Why?
 
-Mostly for the lulz, but I also want to create an emulator at some point, and need a way for user's to load up binary files, and this seemed like the most user friendly way of doing it.
+Mostly for the lulz, but I also want to create an emulator at some point, and need a way for users to load up binary files, and this seemed like the most user friendly way of doing it.
 
 ## How?
 
